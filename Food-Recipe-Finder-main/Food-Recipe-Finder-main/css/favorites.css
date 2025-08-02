@@ -1,0 +1,112 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: #355c7d;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.meal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.meal {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.meal:hover {
+  transform: scale(1.03);
+}
+
+.meal img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.meal-info {
+  padding: 1rem;
+}
+
+.meal-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #355c7d;
+}
+
+.meal-info p {
+  margin: 0.5rem 0;
+  color: #777;
+}
+
+.meal-info button {
+  padding: 0.5rem 1rem;
+  background-color: #f67280;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.meal-info button:hover {
+  background-color: #355c7d;
+}
+
+#meal-detail {
+  margin-top: 2rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#meal-detail h2 {
+  color: #355c7d;
+}
+
+#meal-detail ul,
+#meal-detail ol {
+  padding-left: 1.2rem;
+  line-height: 1.6;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #f67280;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

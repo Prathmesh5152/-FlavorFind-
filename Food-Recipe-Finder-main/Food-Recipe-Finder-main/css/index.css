@@ -1,0 +1,147 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  margin: 0; 
+  padding: 0;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+h1 {
+  text-align: center;
+  color: #902a2a;
+}
+#search-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+#search-input, #filter-select {
+  padding: 0.5rem;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+#search-button {
+  padding: 0.5rem 1rem;
+  background-color: #4bb019bf;
+  color: rgb(218, 232, 217);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.meal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.meal {
+  background: #dfd7e9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.meal:hover {
+  transform: scale(1.03);
+}
+.meal img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.meal-info {
+  padding: 1rem;
+}
+#meal-detail {
+  margin-top: 3rem;
+  background: #6f8e98;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.703);
+}
+#feedback-section {
+  margin-top: 2rem;
+}
+#feedback-section textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+#feedback-section button {
+  padding: 10px 15px;
+  background-color: #355c7d;
+  color: rgba(235, 211, 211, 0.705);
+  border: none;
+  border-radius: 5px;
+}
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #df6f7b;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#mic-button {
+  padding: 0.5rem;
+  background-color: #314150;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#mic-button.listening {
+  background-color: #f67280;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+#mic-status {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#favorites-button {
+  padding: 0.5rem 1rem;
+  background-color: #355c7d;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+#favorites-button:hover {
+  background-color: #f67280;
+}
+#favorites-button span {
+  font-weight: bold;
+}
